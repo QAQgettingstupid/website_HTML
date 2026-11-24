@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+   <html>
+      <head>
+            <title>NTUE Employee Information</title>
+      </head>
+      <body>
+         <h2>新人報到表單</h2>
+         <form action="/register">
+            <fieldset>
+            <legend>個人資料</legend>
+            <label for="firstname">姓名 :</label>
+            <input type="text" id="firstname" name="firstname" required>
+            <br/><br/>
+            <label for="birthday">生日 :</label>
+            <input type="date" required>
+            <br/><br/>
+            <label for="lastname">行動電話號碼 :</label>
+            <input type="tel" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" required>
+            <label for="lastname">(填寫格式: 1234-567-890)</label>
+            <br/><br/>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </fieldset>
+        <br/><br/>
+        <fieldset>
+            <legend>教育程度</legend>
+            <label for="hdegree">最高學歷 :</label>
+            <input type="text" list="degree" placeholder="請選擇" required>
+            <datalist id="degree">
+                <option value="博士">
+                <option value="碩士">
+                <option value="大學">
+                <option value="高中">
+            </datalist>
+            <br/><br/>
+            <label for="Collegename">學校名稱 :</label>
+            <input type="text" id="Collegename" name="Collegename" required>
+            <br/><br/>
+            <label for="University">畢業狀況 :</label>
+            <input type="radio" id="graduated" name="graduation" value="graduated" required>
+            <label for="graduated">已畢業</label>
+            <input type="radio" id="graduated" name="graduation" value="graduated" required>
+            <label for="graduated">肄業</label>
+            <br/><br/>
+        </fieldset>
+        <br/><br/>
+        <fieldset>
+            <legend>職位資訊</legend>
+            <label for="hdegree">部門 :</label>
+            <input type="text" list="department" placeholder="請選擇" required>
+            <datalist id="department">
+                <option value="人力資源部">
+                <option value="資訊技術部">
+                <option value="財務部">
+            </datalist>
+            <br/><br/>
+            <label for="Collegename">性別 :</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">男</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">女</label>
+            <br/><br/>
+        </fieldset>
+        <br/>
+        <input type="submit" value="提交">
+
+         </form>
+      </body>
+</html>
